@@ -1,13 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Three.js and Vanta.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+
+  <title>My Portfolio</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- Vanta Effect -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const interval = setInterval(() => {
+        // Ensure the element is loaded before applying Vanta
+        const vantaElement = document.getElementById('vanta-bg');
+        if (vantaElement) {
+          VANTA.WAVES({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x0,
+            shininess: 150.00,
+            waveHeight: 40.00,
+            waveSpeed: 1.45,
+            zoom: 1.75
+          });
+          clearInterval(interval); // Stop checking once applied
+        }
+      }, 100); // Check every 100ms
+    });
+  </script>
+
+</body>
+
 </html>
