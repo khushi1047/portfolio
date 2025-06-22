@@ -9,7 +9,7 @@ import {Contact} from './components/Contact';
 function App() {
   return (
     <>
-    <div id="vanta-bg" className=" text-white">
+    <div  className=" text-white bg-black">
         <Navbar/>
         <section id="about"><About/></section>
         <section id="skills"><Skills/></section>

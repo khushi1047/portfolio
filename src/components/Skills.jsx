@@ -14,7 +14,7 @@ import { IoLogoFigma } from "react-icons/io5";
 export const Skills = () =>{
     return(
         <>
-        {/* <p>Skills</p> */}   
+     
         <div className="flex flex-row justify-between p-10 lg:justify-center lg:gap-5">
            <div className="w-2 h-[100px] bg-linear-to-r from-blue-950 via-purple-900 to-gray-900 " ></div> 
             <p className="text-5xl font-bold lg:text-7xl">Skills</p>

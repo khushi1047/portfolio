@@ -11,7 +11,7 @@ export const ProjectCard = (props) => {
               {props.text}{props.description }
             </p>
 
-            {/* GitHub Icon Button */}
+           
             <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300">
                 <FaGithub size={30} />
             </a>
